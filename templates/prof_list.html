@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профессии</title>
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block content %}
+
+    {% if ul == 1 %}
+        <ul>{% for prof in prof_list %}
+            <li>{{ prof }}</li>
+            {% endfor %}</ul>
+
+    {% elif ul == 0 %}
+        <ol>{% for prof in prof_list %}
+                    <li>{{ prof }}</li>
+            {% endfor %}</ol>
+    {% else %}
+        <h1>Неверный параметр!</h1>
+
+    {% endif %}
+
+    {% endblock %}
+</body>
+</html>
