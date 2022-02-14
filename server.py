@@ -25,4 +25,13 @@ def list_prof(ul):
     return render_template('prof_list.html', **param)
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    param = {'title': 'Анкета', 'surname': 'Амогусов', 'name': 'Sus', 'education': 'выше всяческих похвал',
+             'profession': 'Импостер', 'sex': 'Подвижный грунтовый ракетный комплекс 15П645 (РСД-10) «Пионер»',
+             'motivation': 'секретно', 'ready': True}
+    return render_template('answer.html', **param)
+
+
 app.run(host='localhost', port=8080, debug=True)
