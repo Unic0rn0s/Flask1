@@ -7,9 +7,8 @@
 <body>
     {% extends "base.html" %}
 
-    <br /><h1>Список профессий</h1>
-
     {% block content %}
+    <br /><h2>Список профессий</h2>
 
     {% if ul == 1 %}
         <ul>{% for prof in prof_list %}
@@ -21,7 +20,7 @@
                     <li>{{ prof }}</li>
             {% endfor %}</ol>
     {% else %}
-        <h1>Неверный параметр!</h1>
+        <h2>Неверный параметр!</h2>
 
     {% endif %}
 
